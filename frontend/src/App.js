@@ -15,7 +15,7 @@ function App() {
     const formData = new FormData();
     formData.append("file", file);
 
-    const res = await axios.post("http://localhost:8000/upload", formData);
+    const res = await axios.post("https://<your-backend-service-name>.onrender.com/upload", formData);
     setLabels(res.data.labels.filter(Boolean));
     setBoxes(res.data.boxes);
   };
